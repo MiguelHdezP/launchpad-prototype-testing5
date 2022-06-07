@@ -6,6 +6,7 @@ import Lists from "../components/lists/Lists";
 import PatientCard from "../components/patient-card/PatientCard";
 import MessagesCard from "../components/messages-card/MessagesCard";
 import ChatsCard from "../components/chats-card/ChatsCard";
+import Hyperlink from "../components/hyperlink/Hyperlink";
 
 export default function Today(props) {
   const {
@@ -276,13 +277,18 @@ export default function Today(props) {
             ))}
           </ul>
         </div>
+        <div className="today-glance-showMore-bottom">
+          <Hyperlink
+            hyperlinkText="Show More"
+            hrefHyperlink="/organizer"
+            hyperlinkTarget="/win64patientchart"
+          />
+        </div>
       </ContainerGlance>
       <ContainerGlance
         glanceTitle="Applications"
         customClassSectHeader="glances-section-header"
         customClassIndividualGlance="chats-glance"
-        icon1On={true}
-        icon2On={true}
       >
         <div className="apps-recents">
           <div className="apps-recents-title">Recents</div>
@@ -315,52 +321,18 @@ export default function Today(props) {
             </li>
           </ul>
         </div>
-      </ContainerGlance>
-      {/*<ContainerGlance
-        glanceTitle="Chats"
-        customClassSectHeader="glances-section-header"
-        customClassIndividualGlance="chats-glance"
-        icon1On={true}
-        icon2On={true}
-      >
-        <div>
-          <ul>
-            {[...Array(5)].map((ele, i) => {
-              const {
-                messageCard = "",
-                messageCard1 = "",
-                messageCard3 = "",
-                messageCard4 = "",
-                messageCardIcon1 = false,
-                messageCardIcon2 = false,
-                messageCardIcon3 = false,
-                messagesCount = 0,
-              } = chatsArr[i];
-              return (
-                <Lists key={i}>
-                  <ChatsCard
-                    messageCard={messageCard}
-                    messageCard1={messageCard1}
-                    messageCard3={messageCard3}
-                    messageCard4={messageCard4}
-                    messageCardIcon1={messageCardIcon1}
-                    messageCardIcon2={messageCardIcon2}
-                    messageCardIcon3={messageCardIcon3}
-                    avatarVal={i}
-                    messagesCount={messagesCount}
-                  />
-                </Lists>
-              );
-            })}
-          </ul>
+        <div className="today-glance-showMore-bottom">
+          <Hyperlink
+            hyperlinkText="Show More"
+            hrefHyperlink="/organizer"
+            hyperlinkTarget="/win64patientchart"
+          />
         </div>
-      </ContainerGlance>*/}
+      </ContainerGlance>
       <ContainerGlance
         glanceTitle="Messages"
         customClassSectHeader="glances-section-header"
         customClassIndividualGlance="messages-glance"
-        icon1On={false}
-        icon2On={false}
         newMessagesCount={countsMsg}
       >
         <div>
@@ -397,7 +369,12 @@ export default function Today(props) {
           </ul>
         </div>
         <div className="today-glance-showMore-bottom">
-          <a href="">Show More</a>
+          <Hyperlink
+            customClassHyperlink=""
+            hyperlinkText="Show More"
+            hrefHyperlink=""
+            hyperlinkTarget=""
+          />
         </div>
       </ContainerGlance>
       <ContainerGlance
@@ -426,6 +403,13 @@ export default function Today(props) {
               </Lists>
             ))}
           </ul>
+        </div>
+        <div className="today-glance-showMore-bottom">
+          <Hyperlink
+            hyperlinkText="Show More"
+            hrefHyperlink="/patient-list"
+            hyperlinkTarget="/webpatientchart"
+          />
         </div>
       </ContainerGlance>
     </ContentContainer>

@@ -33,16 +33,7 @@ export default function SectionHeader(props) {
         </span>
       </div>
       <div>
-        {hyperlinkText.length ? (
-          <Hyperlink
-            customClassHyperlink={customClassHyperlink}
-            hyperlinkText={hyperlinkText}
-            hrefHyperlink={hrefHyperlink}
-            hyperlinkTarget={hyperlinkTarget}
-          />
-        ) : (
-          ""
-        )}
+        {hyperlinkText.length ? "" : ""}
         {icon1On ? <BsFillFunnelFill /> : ""}
         {icon2On ? <IconExternalLink /> : ""}
       </div>

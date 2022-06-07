@@ -35,13 +35,12 @@
   .patientList-glance {
     height: auto;
   }
-  .messages-glance {
-    .today-glance-showMore-bottom {
-      text-align: center;
-      margin: 0.5rem 1rem 0.5rem 0.5rem;
-      font-size: 0.85rem;
-      color: #006aa7;
-    }
+  .today-glance-showMore-bottom {
+    font-size: 0.85rem;
+    color: #006aa7;
+    cursor: pointer;
+    text-align: center;
+    margin: 0.5rem 1rem 0.5rem 0.5rem;
   }
 }
 
@@ -54,7 +53,7 @@
 }
 .z-citrix-apps.citrix-apps {
   flex-direction: column;
-  height: 90vh;
+  height: 380vh;
 }
 
 .homepage.content-container {
